@@ -1,12 +1,15 @@
 import React from 'react';
-import logo from '../images/logo.png';
+import logo from '../images/SadiaSays.png';
 
+import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
 export default () => {
+  const { title, description } = useSiteMetadata();
   return (
     <div>
-      <h1>Hello World!</h1>
-      <img src={logo} alt="Logo" />
+      <img src={logo} alt="Sadia Says" />
+      <h1> {title} </h1>
+      <p> {description} </p>
     </div>
   )
 };
