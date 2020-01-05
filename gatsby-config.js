@@ -4,6 +4,7 @@ module.exports = {
     description: `Random thoughts and ideas`
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -12,10 +13,7 @@ module.exports = {
     },
     {
       resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/posts`,
-        name: `posts`,
-      },
+      options: { path: `${__dirname}/posts`, name: `posts` },
     },
   ],
 };
