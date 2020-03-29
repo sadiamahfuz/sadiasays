@@ -1,3 +1,11 @@
 import React from "react"
 
-export default () => <h1>Sadia Says</h1>
+import "./header.css"
+
+export default () => (
+  <div className="header-container">
+    <h1>
+      Sadia Says
+    </h1>
+  </div>
+)
