@@ -1,1 +1,1 @@
-import "./src/styles/styles.css"
+import "typeface-alegreya-sans"
