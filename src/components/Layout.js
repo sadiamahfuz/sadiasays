@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import Header from "../components/Header"
+import Footer from "../components/Footer"
+import NavBar from "../components/NavBar"
 
 const Container = styled.div`
   margin: 3rem auto;
@@ -13,6 +15,8 @@ const Container = styled.div`
 export default ({ children, noHeader}) => (
   <Container>
     {!noHeader && <Header />}
+    <NavBar />
     {children}
+    <Footer />
   </Container>
 )

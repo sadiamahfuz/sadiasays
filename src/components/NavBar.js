@@ -1,9 +1,18 @@
 import React from "react"
 import { Link } from "gatsby"
-import navBarStyles from "./navbar.module.css"
+import styled from "styled-components"
+
+const NavLink = styled(props => <Link {...props} />)`
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.2rem;
+  padding: 0.2rem;
+  text-decoration: none;
+  color: #9d036a;
+`
+
 
 export default () => (
   <div>
-    <Link className={navBarStyles.navLink} to="/">Home</Link> | <Link className={navBarStyles.navLink} to="/about">About</Link>
+    <NavLink to="/">Home</NavLink> | <NavLink to="/about">About</NavLink>
   </div>
 )

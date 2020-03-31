@@ -14,7 +14,6 @@ export default () => {
     }`
   )
 
-
   return (
   <div className={headerStyles.header}>
     <h1>{data.site.siteMetadata.title}</h1>
