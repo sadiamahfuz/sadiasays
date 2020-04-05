@@ -6,7 +6,23 @@ module.exports = {
     year: "2020"
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name:`tech`,
+        path: `${__dirname}/content/tech/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          default: require.resolve("./src/pages/markdownpage-template.js")
+        }
+      }
+    },
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-mdx`,
-    `gatsby-plugin-styled-components`],
+    `gatsby-plugin-styled-components`
+  ],
 }

@@ -9,7 +9,8 @@ const Container = styled.div`
   max-width: 650px;
   padding: 0 1rem;
   font-family: 'Alegreya Sans', sans-serif;
-  color: #9d036a;
+  color: #544951;
+  font-size: 1.2rem;
 `
 
 export default ({ children, noHeader}) => (

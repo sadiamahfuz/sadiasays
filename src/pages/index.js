@@ -1,11 +1,11 @@
 import React from "react"
 import Layout from "../components/Layout"
-import textStyle from "../components/text.module.css"
+import { graphql } from "gatsby"
 
 export default ({data}) => (
-  <Layout className={textStyle.darkGrey}>
-    <p className={textStyle.darkGrey}>Welcome to Sadia says!</p>
-    <p className={textStyle.darkGrey}>Last built on {data.site.buildTime}</p>
+  <Layout>
+    <p>Welcome to Sadia says!</p>
+    <p>Last built on {data.site.buildTime}</p>
   </Layout>
 )
 
