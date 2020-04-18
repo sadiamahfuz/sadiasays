@@ -14,10 +14,6 @@ export default ({ data: { mdx } }) => {
   )
 }
 
-// }
-
-
-//
 export const pageQuery = graphql`
   query TechPageQuery($id: String) {
     mdx(id: { eq: $id }) {

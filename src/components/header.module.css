@@ -1,6 +1,7 @@
 .header {
   font-family: 'Alegreya Sans', sans-serif;
   color: #9d036a;
+  display: flex;
 }
 
 .footer {

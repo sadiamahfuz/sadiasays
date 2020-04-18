@@ -13,10 +13,9 @@ const Container = styled.div`
   font-size: 1.2rem;
 `
 
-export default ({ children, noHeader}) => (
+export default ({ children}) => (
   <Container>
-    {!noHeader && <Header />}
-    <NavBar />
+    <Header />
     {children}
     <Footer />
   </Container>

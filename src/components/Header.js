@@ -1,21 +1,19 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import headerStyles from "./header.module.css"
+import Logo from "./Logo"
+import NavBar from "../components/NavBar"
+import styled from "styled-components"
 
-export default () => {
-  const data = useStaticQuery(
-    graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }`
-  )
+const Header = styled.div`
+  font-family: 'Alegreya Sans', sans-serif;
+  color: #9d036a;
+  display: flex;
+  justify-content: space-between;
+`
 
-  return (
-  <div className={headerStyles.header}>
-    <h1>{data.site.siteMetadata.title}</h1>
-  </div>
-)}
+
+export default () => (
+  <Header>
+    <Logo />
+    <NavBar />
+  </Header>
+)
