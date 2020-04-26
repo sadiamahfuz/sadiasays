@@ -13,8 +13,8 @@ const NavLink = styled(props => <Link {...props} />)`
 
 export default () => (
   <div>
-    <NavLink to="/">Home</NavLink> {" | "}
-    <NavLink to="/book">Book</NavLink> {" | "}
-    <NavLink to="/tech">Tech</NavLink>
+    <NavLink to="/">HOME</NavLink>{"   "}
+    <NavLink to="/book">BOOK</NavLink>{"   "}
+    <NavLink to="/tech">TECH</NavLink>{"   "}
   </div>
 )
