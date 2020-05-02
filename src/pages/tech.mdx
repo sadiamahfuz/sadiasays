@@ -2,12 +2,12 @@
 title: Tech
 ---
 import { Link } from "gatsby"
+import Excerpt from "../components/Excerpt"
 
-<ul>
+<ul style={{listStyleType: 'none'}}>
   {props.data.allMdx.nodes.map(node => (
     <li key={node.id}>
-      <Link to={node.fields.slug}>{node.frontmatter.title}</Link> (
-      {node.frontmatter.date}) - {node.excerpt}
+      <Excerpt data={node} />
     </li>
   ))}
 </ul>

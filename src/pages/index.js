@@ -1,16 +1,15 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
-import { Link } from "gatsby"
+import Excerpt from "../components/Excerpt"
 
 
 export default ({data}) => (
   <Layout>
-  <ul>
+  <ul style={{listStyleType: 'none'}}>
     {data.allMdx.nodes.map(node => (
       <li key={node.id}>
-        <Link to={node.fields.slug}>{node.frontmatter.title}</Link> (
-        {node.frontmatter.date}) - {node.excerpt}
+        <Excerpt data={node} />
       </li>
     ))}
   </ul>

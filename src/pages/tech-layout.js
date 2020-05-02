@@ -6,7 +6,7 @@ import Layout from "../components/Layout"
 export default ({ data: { mdx } }) => {
   return (
     <Layout>
-      <h3>{mdx.frontmatter.title}</h3>
+      <h2>{mdx.frontmatter.title}</h2>
       <h3>{mdx.frontmatter.date}</h3>
       <MDXRenderer>{mdx.body}</MDXRenderer>
       <p>{mdx.frontmatter.tags}</p>
