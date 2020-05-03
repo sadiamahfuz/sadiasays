@@ -7,9 +7,8 @@ export default ({ data: { mdx } }) => {
   return (
     <Layout>
       <h2>{mdx.frontmatter.title}</h2>
-      <h3>{mdx.frontmatter.date}</h3>
+      <p>{mdx.frontmatter.date}</p>
       <MDXRenderer>{mdx.body}</MDXRenderer>
-      <p>{mdx.frontmatter.tags}</p>
     </Layout>
   )
 }

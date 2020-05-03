@@ -25,6 +25,7 @@ export const query = graphql`
         date(formatString: "DD MMM YYYY")
         title
         tags
+        category
       }
       id
       fields {
