@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 const FooterContainer = styled.div`
   font-family: 'Alegreya Sans', sans-serif;
+  font-size: 0.7rem;
   position: fixed;
   bottom: 10;
   margin: 0;

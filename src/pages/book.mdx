@@ -14,7 +14,7 @@ import Excerpt from "../components/Excerpt"
 
 export const pageQuery = graphql`
   query {
-  allMdx(sort: {fields: frontmatter___date, order: DESC}, filter: {frontmatter: {category: {eq: "book-review"}}}) {
+  allMdx(sort: {fields: frontmatter___date, order: DESC}, filter: {frontmatter: {category: {eq: "book review"}}}) {
     nodes {
       excerpt
       frontmatter {
@@ -22,6 +22,9 @@ export const pageQuery = graphql`
         title
         tags
         category
+        thumbnail {
+          relativePath
+        }
       }
       id
       fields {

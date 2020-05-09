@@ -26,6 +26,9 @@ export const query = graphql`
         title
         tags
         category
+        thumbnail {
+          relativePath
+        }
       }
       id
       fields {

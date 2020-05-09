@@ -3,14 +3,11 @@ import styled from "styled-components"
 import { navigate } from "gatsby"
 
 const Excerpt = styled.div`
-  cursor: pointer;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 `
 
 const Category = styled.div`
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #9d929b;
 `
 
@@ -32,17 +29,34 @@ const Details = styled.p`
   font-size: 1rem;
 `
 
+const Thumbnail = styled.img`
+  max-height: 100px;
+  align-items: flex-end;
+`
+
+const ExcerptWithThumbnail = styled.div`
+  cursor: pointer;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+`
+
 function handleClick(url) {
   navigate(url);
 }
 
 export default ({ data }) => {
+  const image = require("../../content/" + data.frontmatter.thumbnail.relativePath);
   return (
-    <Excerpt onClick={() => handleClick(data.fields.slug)}>
-      <Category>{data.frontmatter.category}</Category>
-      <Title>{data.frontmatter.title}</Title>
-      <Details>{data.excerpt}</Details>
-      <Date>{data.frontmatter.date}</Date>
-    </Excerpt>
+    <ExcerptWithThumbnail onClick={() => handleClick(data.fields.slug)}>
+      <Excerpt>
+        <Category>{data.frontmatter.category}</Category>
+        <Title>{data.frontmatter.title}</Title>
+        <Details>{data.excerpt}</Details>
+        <Date>{data.frontmatter.date}</Date>
+      </Excerpt>
+      <Thumbnail src={image} alt="image" />
+    </ExcerptWithThumbnail>
   )
 }
