@@ -21,7 +21,9 @@ const Rating = styled.p`
 `
 
 const Image = styled.img`
-  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 `
 
 export default ({ data: { mdx } }) => {

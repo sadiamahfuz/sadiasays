@@ -31,7 +31,8 @@ const Details = styled.p`
 
 const Thumbnail = styled.img`
   max-height: 100px;
-  align-items: flex-end;
+  display: inline-block;
+  align-self: flex-end;
 `
 
 const ExcerptWithThumbnail = styled.div`
