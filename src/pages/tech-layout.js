@@ -14,6 +14,7 @@ const Title = styled.h3`
 
 const Date = styled.p`
   margin-top: 0;
+  margin-bottom: 0;
   color: #9d929b;
   font-size: 0.9rem;
 `;
@@ -27,6 +28,9 @@ const Image = styled.img`
 const StyledRating = withStyles({
     iconFilled: {
         color: '#9d036a'
+    },
+    iconEmpty: {
+        color: '#9d929b'
     }
 })(Rating);
 
