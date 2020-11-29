@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
   siteMetadata: {
     title: "Sadia Says",
@@ -22,7 +23,6 @@ module.exports = {
         }
       }
     },
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-styled-components`
   ],
 }

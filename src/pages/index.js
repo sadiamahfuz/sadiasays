@@ -26,6 +26,7 @@ export const query = graphql`
         title
         tags
         category
+        rating  
         thumbnail {
           relativePath
         }

@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { navigate } from "gatsby"
+import { withStyles } from "@material-ui/core/styles";
+import { Rating } from "@material-ui/lab";
 
 const Excerpt = styled.div`
 `
@@ -24,7 +26,7 @@ const Date = styled.p`
 `
 
 const Details = styled.p`
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   margin-bottom: 0;
   font-size: 1rem;
 `
@@ -44,8 +46,18 @@ const ExcerptWithThumbnail = styled.div`
 `
 
 function handleClick(url) {
+  console.log(url);
   navigate(url);
 }
+
+const StyledRating = withStyles({
+  iconFilled: {
+    color: '#9d036a'
+  },
+  iconEmpty: {
+    color: '#9d929b'
+  }
+})(Rating);
 
 export default ({ data }) => {
   const image = require("../../content/" + data.frontmatter.thumbnail.relativePath);
@@ -54,6 +66,7 @@ export default ({ data }) => {
       <Excerpt>
         <Category>{data.frontmatter.category}</Category>
         <Title>{data.frontmatter.title}</Title>
+        {data.frontmatter.rating ? <StyledRating defaultValue={data.frontmatter.rating} readOnly={true} size="small"/> : null}
         <Details>{data.excerpt}</Details>
         <Date>{data.frontmatter.date}</Date>
       </Excerpt>

@@ -1,7 +1,7 @@
 ---
 title: Tech
 ---
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Excerpt from "../components/Excerpt"
 
 <ul style={{listStyleType: 'none'}}>
@@ -22,6 +22,7 @@ export const pageQuery = graphql`
         title
         tags
         category
+        rating
         thumbnail {
           relativePath
         }
